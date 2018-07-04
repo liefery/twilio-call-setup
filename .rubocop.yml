@@ -1,0 +1,146 @@
+require: rubocop-rspec
+
+# we can't support 2.5 because ruby_parser is broken for some of the new synthax and this breaks brakeman.
+# See https://github.com/seattlerb/ruby_parser/issues/262
+AllCops:
+  TargetRubyVersion: 2.5
+  DisplayStyleGuide: true
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/NumericLiteralPrefix:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+# IRRELEVANT_CHANGES constant breaks
+Style/MutableConstant:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/AsciiComments:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+# Breaks Rails 4.2. Activate in Rails 5
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Max: 500
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Rails/TimeZone:
+  EnforcedStyle: flexible
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+# We don't want to enforce this in spec because it would break
+# identification for chained expect change.
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+    - 'spec/**/*'
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*'
+
+Style/SymbolArray:
+  Enabled: false
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+Performance/UnfreezeString:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+RSpec/PredicateMatcher:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/ExpectChange:
+  EnforcedStyle: block
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 15
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+FactoryBot/CreateList:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
+  Enabled: false

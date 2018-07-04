@@ -1,0 +1,4 @@
+<Response>
+<Say voice="alice">We are connecting you with the customer.</Say>
+<Dial>{{Customer}}</Dial>
+</Response>
