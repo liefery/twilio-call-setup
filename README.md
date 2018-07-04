@@ -12,7 +12,7 @@ gem install twilio-call-setup
 
 # Setup
 
-To use this gem you have to create a TwiML-Bin template. You can use [template.xml.sample](template.xml.sample) as a starting point.
+To use this gem you have to create a TwiML-Bin template. You can use [template.xml.sample](template.xml.sample) as a starting point. The `Customer` variable contains the phone number passed as `to` parameter, when initiating the call. The `action` attribute of the `Dial` element specifies a URL to which Twilio makes a `GET` or `POST` request after the call ended. [Learn more](https://www.twilio.com/docs/voice/twiml/dial#action).
 
 # Usage
 
