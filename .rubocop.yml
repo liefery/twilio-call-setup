@@ -1,7 +1,7 @@
 require: rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 1.6
+  TargetRubyVersion: 2.1
 
 Style/Documentation:
   Enabled: false
