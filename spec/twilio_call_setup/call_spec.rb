@@ -4,7 +4,6 @@ require "spec_helper"
 require "twilio-call-setup"
 
 describe TwilioCallSetup::Call do
-  let(:template_url) { "https://handler.twilio.com/twiml/ABCDEFG" }
   subject(:twilio_call) do
     described_class.new(
       client_double,
@@ -15,8 +14,9 @@ describe TwilioCallSetup::Call do
     )
   end
 
-  let(:calls_double)    { double(:create) }
-  let(:client_double)   { double(calls: calls_double) }
+  let(:calls_double)  { double(:create) }
+  let(:client_double) { double(calls: calls_double) }
+  let(:template_url)  { "https://handler.twilio.com/twiml/ABCDEFG" }
 
   describe "#initialize" do
     it "initiates a call" do
@@ -29,12 +29,15 @@ describe TwilioCallSetup::Call do
       twilio_call
     end
 
-    context "template_url contains params" do
-      let(:template_url) { "https://handler.twilio.com/twiml/ABCDEFG?ObjectId=1" }
+    context "when template_url contains params" do
+      let(:template_url) do
+        "https://handler.twilio.com/twiml/ABCDEFG?ObjectId=1"
+      end
 
       it "initiates a call" do
         expect(calls_double).to receive(:create).with(
-          url: "https://handler.twilio.com/twiml/ABCDEFG?ObjectId=1&Contact=+49987654321",
+          url: "https://handler.twilio.com/twiml/ABCDEFG"\
+               "?ObjectId=1&Contact=+49987654321",
           to: "+49123456789",
           from: "+491324354657"
         )
