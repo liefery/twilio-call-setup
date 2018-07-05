@@ -1,0 +1,19 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.1
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 15
+
+RSpec/VerifiedDoubles:
+  Enabled: false
