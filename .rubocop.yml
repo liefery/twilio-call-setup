@@ -3,17 +3,21 @@ require: rubocop-rspec
 AllCops:
   TargetRubyVersion: 2.1
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*_spec.rb
+
+RSpec/ExampleLength:
+  Max: 15
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
-RSpec/MessageSpies:
-  Enabled: false
-
-RSpec/ExampleLength:
-  Max: 15
-
-RSpec/VerifiedDoubles:
-  Enabled: false
