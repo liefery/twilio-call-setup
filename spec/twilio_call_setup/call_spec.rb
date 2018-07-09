@@ -21,7 +21,7 @@ describe TwilioCallSetup::Call do
   describe "#initialize" do
     it "initiates a call" do
       expect(calls_double).to receive(:create).with(
-        url: "https://handler.twilio.com/twiml/ABCDEFG?Contact=+49987654321",
+        url: "https://handler.twilio.com/twiml/ABCDEFG?Customer=+49987654321",
         to: "+49123456789",
         from: "+491324354657"
       )
@@ -37,7 +37,7 @@ describe TwilioCallSetup::Call do
       it "initiates a call" do
         expect(calls_double).to receive(:create).with(
           url: "https://handler.twilio.com/twiml/ABCDEFG"\
-               "?ObjectId=1&Contact=+49987654321",
+               "?ObjectId=1&Customer=+49987654321",
           to: "+49123456789",
           from: "+491324354657"
         )

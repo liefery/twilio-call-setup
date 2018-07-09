@@ -13,7 +13,7 @@ module TwilioCallSetup
     private
 
     def url(to, template_url)
-      "#{template_url}#{template_url.include?('?') ? '&' : '?'}Contact=#{to}"
+      "#{template_url}#{template_url.include?('?') ? '&' : '?'}Customer=#{to}"
     end
   end
 end
