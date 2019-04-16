@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    twilio-call-setup (0.1.0)
+    twilio-call-setup (0.2.0)
       twilio-ruby (~> 5.10)
 
 GEM
