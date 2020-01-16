@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.files                 = Dir["README.md", "lib/**/*"]
   gem.require_paths         = ["lib"]
 
-  gem.required_ruby_version = ">= 2.3"
+  gem.required_ruby_version = ">= 2.4"
 
   gem.add_dependency "twilio-ruby", "~> 5.10"
 
