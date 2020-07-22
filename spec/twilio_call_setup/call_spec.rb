@@ -2,7 +2,6 @@
 
 require "spec_helper"
 require "twilio-call-setup"
-# trying to trigger jenkins with this commit
 
 describe TwilioCallSetup::Call do
   subject(:twilio_call) do
